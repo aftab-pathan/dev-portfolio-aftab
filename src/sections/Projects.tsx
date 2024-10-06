@@ -57,8 +57,8 @@ export const ProjectsSection = () => {
         <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Featured Projects</h2>
         <p className="text-center text-white/60 mt-4 ms:text-lg lg:text-xl max-w-md mx-auto">See how I transformed concepts into engaging digital experience.</p>
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
-          {portfolioProjects.map(project => (
-            <Card key={project.title} className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 pb-0" >
+          {portfolioProjects.map((project, i) => (
+            <Card key={project.title} className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 pb-0 sticky" style={{ top: `calc(64px + ${i * 40}px` }} >
               <div className="lg:grid lg:grid-cols-2 lag:gap-16">
                 <div className="lg:pb-16">
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2  font-bold uppercase tracking-widest text-sm text-transparent bg-clip-text">

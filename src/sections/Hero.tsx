@@ -5,7 +5,9 @@ import grainImage from '@/assets/images/grain.jpg'
 import StartIcon from '@/assets/icons/star.svg'
 import SparkelIcon from '@/assets/icons/sparkle.svg'
 import { HeroOrbit } from "@/components/HeroOrbit";
+import { FlipWords } from "@/components/ui/flip-words";
 
+const words = ["Front-End Developer", "Full-Stack Developer", "UI/UX Designer", "Available for new projects"];
 
 export const HeroSection = () => {
   return <div id="Home" className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
@@ -57,7 +59,8 @@ export const HeroSection = () => {
           <div className="bg-green-500 size-2.5 rounded-full relative ">
             <div className="bg-green-500 absolute inset-0 animate-ping-large rounded-full"></div>
           </div>
-          <div className="text-sm font-medium">Available for new projects</div>
+          <FlipWords words={words} />
+          <div className="text-sm font-medium"></div>
         </div>
       </div>
       <div className="max-w-lg mx-auto">

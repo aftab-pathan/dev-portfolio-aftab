@@ -16,6 +16,7 @@ import { CardHeader } from "@/components/CardHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import { motion } from "framer-motion"
 import { useRef } from "react";
+import { WorkFlow } from "@/components/WorkFlow";
 
 const toolBoxItemsList = [
   { title: 'Javascript', iconType: JavaScriptIcon },
@@ -34,6 +35,11 @@ const hobbies = [
   { title: 'Reading', emoji: '📚', left: "35%", top: "40%" },
   { title: 'Fitness', emoji: '💪', left: "70%", top: "45%" },
   { title: 'Traveling', emoji: '✈️', left: "5%", top: "65%" },
+]
+
+const experience = [
+  { start: 'Feb-22', end: 'Present', companyName: 'Infosys Ltd.', role: 'Senior System Engineer', description: 'Developed map-based EV dashboards, optimized APIs by 60%, and led mobile optimization. Designed responsive wireframes in Figma.' },
+  { start: 'Jun-19', end: 'Jun-20', companyName: 'Birla Cellulosic', role: 'Trainee Engineer', description: 'Managed inventory tracking and event scheduling using SAP, improving operational efficiency and resource allocation within the organization' },
 ]
 
 export const AboutSection = () => {
@@ -86,6 +92,12 @@ export const AboutSection = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image src={emojiSmile} alt="smilimg Emoji" className="size-20  " />
               </div>
+            </Card>
+          </div>
+          <div className="grid grid-cols-1">
+            <Card>
+              <CardHeader title="My Experience" description="" />
+              <WorkFlow experienceList={experience} />
             </Card>
           </div>
         </div>

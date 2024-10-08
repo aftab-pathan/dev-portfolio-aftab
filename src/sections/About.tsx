@@ -40,7 +40,7 @@ export const AboutSection = () => {
   const boundrayRef = useRef(null)
 
   return (
-    <div className="pb-20 lg:py-28">
+    <div id="About" className="pb-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"

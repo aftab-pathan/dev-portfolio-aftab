@@ -8,7 +8,7 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 
 
 export const HeroSection = () => {
-  return <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+  return <div id="Home" className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
     <div className="absolute inset-0 [mask-image:liner-gradient(circle,#000_10%,transparent_80%)]">
       {/* Green Grain Image as Background   */}
       <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }}></div>
@@ -61,20 +61,25 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="max-w-lg mx-auto">
-        <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Building Exceptional User Experiences</h1>
+        <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Aftab Pathan</h1>
+        {/* <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Building Exceptional User Experiences</h1> */}
         <p className="mt-4 text-center text-white/60 md:text-lg">
           I specialize in transforming design into functional, high-Performance web application. Let's discuss your next project.
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-        <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-          <span className="font-semibold">Explore My work</span>
-          <ArrowDown className="size-4" />
-        </button>
-        <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-          <span>👋</span>
-          <span className="font-semibold">Let's Connect</span>
-        </button>
+        <a href="#Projects" style={{ zIndex: 10 }}>
+          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl cursor-pointer">
+            <span className="font-semibold">Explore My work</span>
+            <ArrowDown className="size-4" />
+          </button>
+        </a>
+        <a href="https://www.linkedin.com/in/aftabpathan313" target="_blank" style={{ zIndex: 10 }}>
+          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+            <span>👋</span>
+            <span className="font-semibold">Let's Connect</span>
+          </button>
+        </a>
       </div>
     </div>
   </div>;
